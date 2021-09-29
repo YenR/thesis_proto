@@ -7,6 +7,19 @@ public class hudscipt : MonoBehaviour
 {
     public static hudscipt instance;
 
+    public void show()
+    {
+        Debug.Log("showing");
+        this.gameObject.SetActive(true);
+    }
+
+    public void hide()
+    {
+        Debug.Log("hiding");
+        this.gameObject.SetActive(false);
+    }
+
+
     // Start is called before the first frame update
     void Start()
     {

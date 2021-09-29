@@ -32,10 +32,27 @@ public class mom_script : MonoBehaviour, IinteractionTrigger
         text.SetText("");
         ib.callback = null;
 
-        dm.StartDialogue(dc);
+        //dm.StartDialogue(dc);
+
+        if(globalVars.progress == 0f)
+        {
+            hudscipt.instance.update_todo("Get some money from the family savings chest.");
+            dm.StartDialogue(dialog);
+            globalVars.progress = 1f;
+        }
+        else if(globalVars.progress > 0f && globalVars.progress < 4f)
+        {
+            dm.StartDialogue(dialog_2);
+        }
+        else if(globalVars.progress == 4f)
+        {
+            dm.StartDialogue(dialog_3);
+        }
     }
 
     public DialogueManager dm;
-    public dialogue_choices dc;
-    public dialogue dialog;
+    //public dialogue_choices dc;
+    public dialogue dialog,         // first time talking to mom
+        dialog_2,                   // after having talked
+        dialog_3;                   // returning with medicine
 }

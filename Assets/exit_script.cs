@@ -28,11 +28,22 @@ public class exit_script : MonoBehaviour, IinteractionTrigger
 
     public void callback()
     {
-        Debug.Log("exited");
         button.gameObject.SetActive(false);
         text.SetText("");
         ib.callback = null;
 
+        if (globalVars.progress < 1)
+        {
+            dm.StartDialogue(d1);
+            return;
+        }
+        else if(globalVars.progress < 2)
+        {
+            dm.StartDialogue(d2);
+            return;
+        }
+
+        Debug.Log("exited");
         //dm.StartDialogue(dc);
         ll.LoadLevelByName("GameScene1");
 
@@ -47,4 +58,8 @@ public class exit_script : MonoBehaviour, IinteractionTrigger
     }
     
     public LevelLoader ll;
+
+    public DialogueManager dm;
+    public dialogue d1,     // before talking to mom
+        d2;                 // before taking the money
 }

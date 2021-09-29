@@ -13,6 +13,8 @@ public class playerMovement : MonoBehaviour
 
     public Animator animator;
 
+    public static bool canMove = true;
+
     void Start()
     {
         if(LevelLoader.startpos != null && LevelLoader.startpos != Vector2.zero)
@@ -25,17 +27,25 @@ public class playerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
-
-        if (Mathf.Abs(joystick.Horizontal) >= 0.2f)
+        if (canMove)
         {
-            movement.x = joystick.Horizontal;
+            movement.x = Input.GetAxisRaw("Horizontal");
+            movement.y = Input.GetAxisRaw("Vertical");
+
+            if (Mathf.Abs(joystick.Horizontal) >= 0.2f)
+            {
+                movement.x = joystick.Horizontal;
+            }
+
+            if (Mathf.Abs(joystick.Vertical) >= 0.2f)
+            {
+                movement.y = joystick.Vertical;
+            }
         }
-
-        if (Mathf.Abs(joystick.Vertical) >= 0.2f)
+        else
         {
-            movement.y = joystick.Vertical;
+            movement.x = 0;
+            movement.y = 0;
         }
 
         if (movement != Vector2.zero)
@@ -43,7 +53,6 @@ public class playerMovement : MonoBehaviour
             animator.SetFloat("horizontal", movement.x);
             animator.SetFloat("vertical", movement.y);
         }
-
         animator.SetFloat("speed", movement.sqrMagnitude);
     }
 

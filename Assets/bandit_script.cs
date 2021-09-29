@@ -12,7 +12,7 @@ public class bandit_script : MonoBehaviour
     {
         if(!talked_to)
         {
-            dm.StartChoiceDialogue(dc);
+            dm.StartDialogue(dc);
             talked_to = true;
         }
     }
@@ -25,5 +25,8 @@ public class bandit_script : MonoBehaviour
     }
 
     public DialogueManager dm;
-    public dialogue_choices dc;
+    public dialogue_choices dc;     // MCx 1 version
+    public dialogue_choices dc_4;   // MCx 2 version
+
+
 }

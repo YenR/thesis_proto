@@ -24,6 +24,10 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(dialogue d)
     {
+        hudscipt.instance.hide(); //.gameObject.SetActive(false);
+        playerMovement.canMove = false;
+        //Debug.Log("henlO");
+
         if (d is dialogue_choices)
         {
             StartChoiceDialogue(d);
@@ -48,6 +52,15 @@ public class DialogueManager : MonoBehaviour
 
         animator.SetBool("isOpen", true);
         //canvas.enabled = true;
+    }
+
+
+    private void Update()
+    {
+        if (Input.GetKeyDown("space") )// && sentences.Count > 0)
+        {
+            DisplayNextSentence();
+        }
     }
 
     public TMP_Text c2_speaker, c2_text, c2_button1, c2_button2;
@@ -86,6 +99,9 @@ public class DialogueManager : MonoBehaviour
         if (c3_animator != null) c3_animator.SetBool("isOpen", false);
         if (c4_animator != null) c4_animator.SetBool("isOpen", false);
         dialogue_result.handle_result(choice_handling[i]);
+
+        hudscipt.instance.show();
+        playerMovement.canMove = true;
     }
 
     public void DisplayNextSentence()
@@ -118,6 +134,8 @@ public class DialogueManager : MonoBehaviour
     {
         //Debug.Log("End of conversation");
         animator.SetBool("isOpen", false);
+        hudscipt.instance.show();
+        playerMovement.canMove = true;
         //canvas.enabled = false;
         //GameObject.Find("Player").GetComponent<PlayerMovement>().enabled = true;
         //GameObject.Find("Player").GetComponent<shooting>().enabled = true;
