@@ -14,5 +14,5 @@ public class globalVars : MonoBehaviour
     // 5 - done
 
 
-    public static int MCx_level = 2;
+    public static int MCx_level = 1;
 }

@@ -32,5 +32,13 @@ public class dialogue_result
         {
             hudscipt.instance.update_todo("Return to mom.");
         }
+        if(result == 5) // fight the bandits
+        {
+            bandit_script.instance.fight();
+        }
+        if(result == 6) // deceive the bandits
+        {
+            bandit_script.instance.moveAway();
+        }
     }
 }

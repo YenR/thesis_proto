@@ -7599,6 +7599,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
+--- !u!95 &173478488 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8419343764947354563, guid: a1b466f5bac2cb942ba8dc1afdf71fc6,
+    type: 3}
+  m_PrefabInstance: {fileID: 8419343764057575811}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &194080574
 GameObject:
   m_ObjectHideFlags: 0
@@ -133797,6 +133803,7 @@ GameObject:
   - component: {fileID: 1464377185}
   - component: {fileID: 1464377187}
   - component: {fileID: 1464377186}
+  - component: {fileID: 1464377188}
   m_Layer: 0
   m_Name: bandits
   m_TagString: Untagged
@@ -133833,18 +133840,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d63e0565a5ee53b41a55d450b3f89888, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bandits: {fileID: 1464377188}
+  player: {fileID: 173478488}
+  bboss: {fileID: 1995534278}
+  b1: {fileID: 1510978996}
+  b2: {fileID: 2071743335}
   dm: {fileID: 1794804280}
   dc:
-    name: Bandits
+    name: Bandit
     sentences:
-    - Your money or your life.
     - Your money or your life.
     choices:
     - Fight
-    - Flight
+    - Deceive
     choice_results: 0500000006000000
   dc_4:
-    name: 
+    name: Bandit
     sentences: []
     choices: []
     choice_results: 
@@ -133874,6 +133885,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.7866764, y: 3.6447067}
   m_EdgeRadius: 0
+--- !u!95 &1464377188
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464377184}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 22ea1dd51233c3443aaf357c483a432b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1510978992
 GameObject:
   m_ObjectHideFlags: 0
@@ -133885,6 +133915,7 @@ GameObject:
   - component: {fileID: 1510978993}
   - component: {fileID: 1510978994}
   - component: {fileID: 1510978995}
+  - component: {fileID: 1510978996}
   m_Layer: 0
   m_Name: b1
   m_TagString: Untagged
@@ -133973,6 +134004,25 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.00000008195639}
   m_Size: {x: 0.6666667, y: 0.9166667}
   m_Direction: 0
+--- !u!95 &1510978996
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510978992}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e9a3b8e08b140c94ca471564a3427fa7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1613721568
 GameObject:
   m_ObjectHideFlags: 0
@@ -134191,6 +134241,7 @@ GameObject:
   - component: {fileID: 1995534275}
   - component: {fileID: 1995534276}
   - component: {fileID: 1995534277}
+  - component: {fileID: 1995534278}
   m_Layer: 0
   m_Name: boss
   m_TagString: Untagged
@@ -134206,7 +134257,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1995534274}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.53, y: 1.28, z: 382.05078}
+  m_LocalPosition: {x: 3.53, y: 1.28, z: 382.0508}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1464377185}
@@ -134279,6 +134330,25 @@ CapsuleCollider2D:
   m_Offset: {x: -0.0000019073486, y: 0}
   m_Size: {x: 0.6666667, y: 0.9166667}
   m_Direction: 0
+--- !u!95 &1995534278
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995534274}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0b691cc7d9563414aa76fb9e1552e07a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2071743331
 GameObject:
   m_ObjectHideFlags: 0
@@ -134290,6 +134360,7 @@ GameObject:
   - component: {fileID: 2071743332}
   - component: {fileID: 2071743333}
   - component: {fileID: 2071743334}
+  - component: {fileID: 2071743335}
   m_Layer: 0
   m_Name: b2
   m_TagString: Untagged
@@ -134378,6 +134449,25 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.5833333, y: 0.9166667}
   m_Direction: 0
+--- !u!95 &2071743335
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071743331}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2b44b934a14a4a6408d9659e307ed296, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2106211772
 GameObject:
   m_ObjectHideFlags: 0
@@ -138065,6 +138155,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueManager
       objectReference: {fileID: 0}
+    - target: {fileID: 2158916090030262513, guid: a3b3a4687eebdfe4b9d68cffdc9a71f8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3b3a4687eebdfe4b9d68cffdc9a71f8, type: 3}
 --- !u!1001 &8035221878389534719
@@ -138184,6 +138279,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HUD Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 8035221877773917911, guid: ccf96c450a38d3e4db072e6f3d1a0b10,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccf96c450a38d3e4db072e6f3d1a0b10, type: 3}
 --- !u!1001 &8419343764057575811
@@ -138197,6 +138297,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8419343764947354557, guid: a1b466f5bac2cb942ba8dc1afdf71fc6,
+        type: 3}
+      propertyPath: speed
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8419343764947354557, guid: a1b466f5bac2cb942ba8dc1afdf71fc6,
         type: 3}

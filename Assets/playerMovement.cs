@@ -27,6 +27,7 @@ public class playerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Debug.Log(canMove);
         if (canMove)
         {
             movement.x = Input.GetAxisRaw("Horizontal");
@@ -59,6 +60,7 @@ public class playerMovement : MonoBehaviour
     void FixedUpdate()
     {
         movement.Normalize();
+        //Debug.Log(rb.position + movement * speed * Time.fixedDeltaTime);
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
     }
 
