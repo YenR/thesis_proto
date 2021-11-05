@@ -1868,6 +1868,13 @@ MonoBehaviour:
   text: {fileID: 807013532}
   ib: {fileID: 42067499}
   ll: {fileID: 1441452000}
+  dm: {fileID: 0}
+  d1:
+    name: 
+    sentences: []
+  d2:
+    name: 
+    sentences: []
 --- !u!61 &1259558002
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4007,24 +4014,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 1838469088}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5c17b7d331ea8f42a2271632c7fb63b, type: 3}
+  m_Script: {fileID: 11500000, guid: 0001c2887c6cc0f43a159b25447037c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 42067496}
   text: {fileID: 807013532}
   ib: {fileID: 42067499}
   dm: {fileID: 1794804280}
-  dc:
-    name: Doc
-    sentences:
-    - want some meds?
-    choices:
-    - ye
-    - no
-    choice_results: 0300000004000000
-  dialog:
-    name: 
+  dc_high_mcx:
+    name: Doctor
     sentences: []
+    choices: []
+    choice_results: 
+  dc_low_mcx:
+    name: Doctor
+    sentences:
+    - Hi there. Medicine costs 15 coins now.
+    choices:
+    - Threaten
+    - Steal
+    choice_results: 0a0000000b000000
+  d_bye_friendly:
+    name: Doctor
+    sentences:
+    - Hi there.
+  d_bye_hostile:
+    name: Doctor
+    sentences:
+    - Get out of here.
 --- !u!70 &1838469092
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -4187,10 +4204,19 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 280493867, guid: a3b3a4687eebdfe4b9d68cffdc9a71f8, type: 3}
+      propertyPath: m_SortingOrder
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 2158916088824242048, guid: a3b3a4687eebdfe4b9d68cffdc9a71f8,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2158916088824242077, guid: a3b3a4687eebdfe4b9d68cffdc9a71f8,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2158916090030262479, guid: a3b3a4687eebdfe4b9d68cffdc9a71f8,
         type: 3}

@@ -7,16 +7,31 @@ using TMPro;
 public class bandit_script : MonoBehaviour
 {
     public static bool talked_to = false;
+    public static int state = 0;
+    // 0 = default
+    // 1 = fought
+    // 2 = threatened
+
     public static bandit_script instance;
 
     private void Start()
     {
         instance = this;
+        if(state == 1)
+        {
+            bandits.SetBool("fought", true);
+        }
+
+        if (state == 2)
+        {
+            bandits.SetBool("made_way", true);
+        }
     }
 
     public void moveAway()
     {
         bandits.SetTrigger("make_way");
+        state = 2;
         /*
         Debug.Log("moving");
         bboss.SetTrigger("make_way");
@@ -28,8 +43,9 @@ public class bandit_script : MonoBehaviour
 
     public void fight()
     {
-        player.SetTrigger("fight");
+        //player.SetTrigger("fight");
         bandits.SetTrigger("fight");
+        state = 1;
     }
 
     //public Animator bboss, b1, b2;
@@ -40,6 +56,7 @@ public class bandit_script : MonoBehaviour
         {
             dm.StartDialogue(dc);
             talked_to = true;
+            globalVars.progress = 3;
         }
     }
     

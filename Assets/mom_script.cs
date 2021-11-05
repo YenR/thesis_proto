@@ -47,6 +47,7 @@ public class mom_script : MonoBehaviour, IinteractionTrigger
         else if(globalVars.progress == 4f)
         {
             dm.StartDialogue(dialog_3);
+            hudscipt.instance.update_todo("You did it!");
         }
     }
 

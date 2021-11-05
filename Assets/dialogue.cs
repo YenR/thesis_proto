@@ -40,5 +40,15 @@ public class dialogue_result
         {
             bandit_script.instance.moveAway();
         }
+
+        if(result == 10) // threaten the doctor
+        {
+            doc_script.friendly = false;
+        }
+
+        if (result == 11) // steal the medicine
+        {
+            doc_script.friendly = false;
+        }
     }
 }
