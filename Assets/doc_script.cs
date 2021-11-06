@@ -37,11 +37,11 @@ public class doc_script : MonoBehaviour, IinteractionTrigger
         if (globalVars.progress >= 3f && globalVars.progress < 4f)
         {
             hudscipt.instance.update_todo("Get back to mom with the medicine.");
-            if(globalVars.MCx_level == 2)
-                dm.StartChoiceDialogue(dc_high_mcx);
-            else
-                dm.StartChoiceDialogue(dc_low_mcx);
             globalVars.progress = 4f;
+            if(globalVars.MCx_level == 2)
+                dm.StartDialogue(dc_high_mcx);
+            else
+                dm.StartDialogue(dc_low_mcx);
         }
         else
         {

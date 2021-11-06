@@ -54,7 +54,8 @@ public class bandit_script : MonoBehaviour
     {
         if(!talked_to)
         {
-            dm.StartDialogue(dc);
+            dm.StartDialogue(d);
+            dm.nextDialogue = dc;
             talked_to = true;
             globalVars.progress = 3;
         }
@@ -68,6 +69,7 @@ public class bandit_script : MonoBehaviour
     }
 
     public DialogueManager dm;
+    public dialogue d;              // intro for both versions
     public dialogue_choices dc;     // MCx 1 version
     public dialogue_choices dc_4;   // MCx 2 version
 
