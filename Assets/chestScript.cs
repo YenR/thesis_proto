@@ -45,6 +45,7 @@ public class chestScript : MonoBehaviour, IinteractionTrigger
             hudscipt.instance.update_todo("Go to the next town, on the other side of the forest.");
             dm.StartDialogue(dialog_mcx1);
             globalVars.progress = 2f;
+            hudscipt.instance.update_money("10");
         }
         else if (globalVars.progress == 1f && globalVars.MCx_level == 2)
         {

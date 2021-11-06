@@ -138212,6 +138212,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d63e0565a5ee53b41a55d450b3f89888, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deceived:
+    name: Bandit
+    sentences:
+    - "Wait, you know the boss? \nNevermind then ..."
   bandits: {fileID: 1464377188}
   player: {fileID: 173478488}
   dm: {fileID: 1794804280}

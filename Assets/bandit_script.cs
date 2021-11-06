@@ -28,8 +28,12 @@ public class bandit_script : MonoBehaviour
         }
     }
 
+    public dialogue deceived;
+
     public void moveAway()
     {
+        dm.nextDialogue = deceived;
+
         bandits.SetTrigger("make_way");
         state = 2;
         /*

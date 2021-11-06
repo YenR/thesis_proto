@@ -24,9 +24,14 @@ public class dialogue_result
     {
         Debug.Log("got result: " + result);
 
-        if(result == 1 || result == 2)
+        if(result == 1 ) // took 10 coins
         {
-            hudscipt.instance.update_todo("Talk to the doctor.\nHe lives on the other side of the forest.");
+            hudscipt.instance.update_money("10");
+        }
+        if(result == 2) // took 15 coins
+        {
+            hudscipt.instance.update_money("15");
+            //hudscipt.instance.update_todo("Talk to the doctor.\nHe lives on the other side of the forest.");
         }
         if(result == 3)
         {
@@ -41,14 +46,26 @@ public class dialogue_result
             bandit_script.instance.moveAway();
         }
 
-        if(result == 10) // threaten the doctor
+        if(result == 10) // threaten the doctor to give it for free
         {
             doc_script.friendly = false;
+            doc_script.instance.got_threatened();
         }
 
-        if (result == 11) // steal the medicine
+        if (result == 11) // threaten the doctor to give it for 10
         {
             doc_script.friendly = false;
+            if (hudscipt.instance.mone.text == "15")
+                hudscipt.instance.update_money("5");
+            else
+                hudscipt.instance.update_money("0");
+            doc_script.instance.got_threatened();
+        }
+
+        if (result == 12) // steal the medicine
+        {
+            doc_script.friendly = true;
+            doc_script.instance.got_robbed();
         }
     }
 }

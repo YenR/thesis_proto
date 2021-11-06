@@ -494,7 +494,7 @@ MonoBehaviour:
     choices:
     - 10 coins
     - 15 coins
-    choice_results: 0000000000000000
+    choice_results: 0100000002000000
 --- !u!58 &421689197
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5261,6 +5261,15 @@ MonoBehaviour:
     name: Mom
     sentences:
     - Thank you so much, my child!
+  money_left_over:
+    name: 
+    sentences:
+    - You keep the money you have left over.
+    - Might as well spend it on something fun later.
+  def:
+    name: Mom
+    sentences:
+    - I am so proud of you.
 --- !u!70 &1838469092
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -5423,6 +5432,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 924231180535893256, guid: a3b3a4687eebdfe4b9d68cffdc9a71f8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2158916088824242048, guid: a3b3a4687eebdfe4b9d68cffdc9a71f8,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -5492,6 +5506,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DialogueManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 3749779141981944362, guid: a3b3a4687eebdfe4b9d68cffdc9a71f8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3b3a4687eebdfe4b9d68cffdc9a71f8, type: 3}

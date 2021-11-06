@@ -4031,9 +4031,18 @@ MonoBehaviour:
     sentences:
     - Hi there. Medicine costs 15 coins now.
     choices:
-    - Threaten
-    - Steal
-    choice_results: 0a0000000b000000
+    - '"Give it to me for free."'
+    - '"I''ll give you 10. No more."'
+    - Steal the medicine
+    choice_results: 0a0000000b0000000c000000
+  result_threaten:
+    name: Doctor
+    sentences:
+    - A- alright, just please do not hurt me. Here, take the medicine.
+  result_steal:
+    name: ' '
+    sentences:
+    - You swipe away the medicine while the doctor seems distracted.
   d_bye_friendly:
     name: Doctor
     sentences:
@@ -4208,6 +4217,11 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 924231180535893256, guid: a3b3a4687eebdfe4b9d68cffdc9a71f8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2158916088824242048, guid: a3b3a4687eebdfe4b9d68cffdc9a71f8,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -4277,6 +4291,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DialogueManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 3749779141981944362, guid: a3b3a4687eebdfe4b9d68cffdc9a71f8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3b3a4687eebdfe4b9d68cffdc9a71f8, type: 3}

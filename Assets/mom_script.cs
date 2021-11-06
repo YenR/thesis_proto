@@ -47,7 +47,14 @@ public class mom_script : MonoBehaviour, IinteractionTrigger
         else if(globalVars.progress == 4f)
         {
             dm.StartDialogue(dialog_3);
+            if (hudscipt.instance.mone.text != "0f")
+                dm.nextDialogue = money_left_over;
             hudscipt.instance.update_todo("You did it!");
+            globalVars.progress = 5f;
+        }
+        else
+        {
+            dm.StartDialogue(def);
         }
     }
 
@@ -56,4 +63,8 @@ public class mom_script : MonoBehaviour, IinteractionTrigger
     public dialogue dialog,         // first time talking to mom
         dialog_2,                   // after having talked
         dialog_3;                   // returning with medicine
+
+    public dialogue money_left_over;
+
+    public dialogue def;
 }

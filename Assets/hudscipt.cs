@@ -27,11 +27,21 @@ public class hudscipt : MonoBehaviour
             instance = this;
         if (text != null && text.Length > 0)
             update_todo(text);
+        if (money != null && money.Length > 0)
+            update_money(money);
     }
 
     public TMP_Text todo;
+    public TMP_Text mone;
 
     public static string text;
+    public static string money;// = "20";
+
+    public void update_money(string m)
+    {
+        money = m;
+        mone.SetText(m);
+    }
 
     public void update_todo(string txt)
     {

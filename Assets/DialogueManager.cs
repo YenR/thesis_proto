@@ -43,6 +43,11 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
+        animator.ResetTrigger("closeNow");
+        animator.ResetTrigger("closeAnim");
+        animator.ResetTrigger("openAnim");
+        animator.ResetTrigger("openNow");
+
         //Debug.Log("starting conversation with " + d.name);
 
         nameText.text = d.name;
@@ -62,7 +67,8 @@ public class DialogueManager : MonoBehaviour
         if (openInstantly)
             animator.SetTrigger("openNow");
         //animator.SetBool("isOpen", true);
-        animator.SetTrigger("openAnim");
+        else
+            animator.SetTrigger("openAnim");
         //canvas.enabled = true;
     }
 
@@ -151,20 +157,42 @@ public class DialogueManager : MonoBehaviour
         //c4_animator.SetBool("isOpen", true);
     }
 
+
+    //public dialogue follow_choice = null;
+
     public void choice_clicked(int i)
     {
         Debug.Log("choice clicked: " + i);
-        if (c2_animator != null)
-            c2_animator.SetTrigger("closeAnim");//c2_animator.SetBool("isOpen", false);
-        if (c3_animator != null)
-            c3_animator.SetTrigger("closeAnim");// c3_animator.SetBool("isOpen", false);
-        if (c4_animator != null)
-            c4_animator.SetTrigger("closeAnim");// c4_animator.SetBool("isOpen", false);
         dialogue_result.handle_result(choice_handling[i]);
 
-        hudscipt.instance.show();
-        choiceDialogueOpen = false;
-        playerMovement.canMove = true;
+        if(nextDialogue != null && nextDialogue.sentences != null && nextDialogue.sentences.Length > 0)
+        {
+            choiceDialogueOpen = false;
+
+            if (c2_animator != null)
+                c2_animator.SetTrigger("closeNow");//c2_animator.SetBool("isOpen", false);
+            if (c3_animator != null)
+                c3_animator.SetTrigger("closeNow");// c3_animator.SetBool("isOpen", false);
+            if (c4_animator != null)
+                c4_animator.SetTrigger("closeNow");// c4_animator.SetBool("isOpen", false);
+
+            StartDialogue(nextDialogue, true);
+
+            nextDialogue = null;
+        }
+        else
+        {
+            if (c2_animator != null)
+                c2_animator.SetTrigger("closeAnim");//c2_animator.SetBool("isOpen", false);
+            if (c3_animator != null)
+                c3_animator.SetTrigger("closeAnim");// c3_animator.SetBool("isOpen", false);
+            if (c4_animator != null)
+                c4_animator.SetTrigger("closeAnim");// c4_animator.SetBool("isOpen", false);
+        
+            hudscipt.instance.show();
+            choiceDialogueOpen = false;
+            playerMovement.canMove = true;
+        }
     }
 
     public void DisplayNextSentence()
@@ -194,9 +222,10 @@ public class DialogueManager : MonoBehaviour
     }
 
 
+
     void EndDialogue()
     {
-        if(nextDialogue != null && nextDialogue.sentences.Length > 0)
+        if(nextDialogue != null && nextDialogue.sentences != null && nextDialogue.sentences.Length > 0)
         {
             Debug.Log("next dialogue not null");
             animator.SetTrigger("closeNow");
