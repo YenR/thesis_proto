@@ -5042,7 +5042,7 @@ RectTransform:
   m_Children:
   - {fileID: 1649953153}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5270,6 +5270,19 @@ MonoBehaviour:
     name: Mom
     sentences:
     - I am so proud of you.
+  tell_about_money:
+    name: ' '
+    sentences:
+    - You have money left over...
+    choices:
+    - Keep it
+    - Give it back
+    choice_results: 1400000015000000
+  confessed:
+    name: Mom
+    sentences:
+    - I... see. Thank you, my child.
+    - Well, do not worry about it, I will put it back into our savings.
 --- !u!70 &1838469092
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -5327,7 +5340,7 @@ PrefabInstance:
     - target: {fileID: 5245837174244599166, guid: 4e27a560c2545444b9555f3a16faa2dd,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5245837174244599166, guid: 4e27a560c2545444b9555f3a16faa2dd,
         type: 3}
@@ -5653,7 +5666,7 @@ PrefabInstance:
     - target: {fileID: 8419343764947354558, guid: a1b466f5bac2cb942ba8dc1afdf71fc6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8419343764947354558, guid: a1b466f5bac2cb942ba8dc1afdf71fc6,
         type: 3}

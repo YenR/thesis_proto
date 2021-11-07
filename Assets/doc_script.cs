@@ -45,8 +45,10 @@ public class doc_script : MonoBehaviour, IinteractionTrigger
         {
             hudscipt.instance.update_todo("Get back to mom with the medicine.");
             globalVars.progress = 4f;
-            if(globalVars.MCx_level == 2)
-                dm.StartDialogue(dc_high_mcx);
+            if (globalVars.MCx_level == 2 && hudscipt.instance.mone.text == "15")
+                dm.StartDialogue(dc_high_mcx_15m);
+            else if (globalVars.MCx_level == 2)
+                dm.StartDialogue(dc_high_mcx_10m);
             else
                 dm.StartDialogue(dc_low_mcx);
         }
@@ -71,9 +73,19 @@ public class doc_script : MonoBehaviour, IinteractionTrigger
         dm.nextDialogue = result_steal;
     }
 
+    public void pleaded()
+    {
+        dm.nextDialogue = result_plea;
+    }
+
+    public void bought()
+    {
+        dm.nextDialogue = result_buy;
+    }
+
     public DialogueManager dm;
 
-    public dialogue_choices dc_high_mcx, dc_low_mcx;
-    public dialogue result_threaten, result_steal;
+    public dialogue_choices dc_high_mcx_15m, dc_high_mcx_10m, dc_low_mcx;
+    public dialogue result_threaten, result_steal, result_buy, result_plea;
     public dialogue d_bye_friendly, d_bye_hostile;
 }

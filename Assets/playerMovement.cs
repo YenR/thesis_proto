@@ -24,11 +24,25 @@ public class playerMovement : MonoBehaviour
         }
     }
 
+    public float stopRunningThreshold = 70f;
+    public float runSpeed = 10f;
+
     // Update is called once per frame
     void Update()
     {
         //Debug.Log(canMove);
-        if (canMove)
+        if(runPastBandits)
+        {
+            if(rb.transform.position.x > stopRunningThreshold)
+            {
+                runPastBandits = false;
+                playerCollider.isTrigger = false;
+            }
+
+            movement.x = 1f;
+            movement.y = 0f;
+        }
+        else if (canMove)
         {
             movement.x = Input.GetAxisRaw("Horizontal");
             movement.y = Input.GetAxisRaw("Vertical");
@@ -59,9 +73,21 @@ public class playerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        if(runPastBandits)
+        {
+            rb.MovePosition(rb.position + movement * runSpeed * Time.fixedDeltaTime);
+            return;
+        }
         movement.Normalize();
         //Debug.Log(rb.position + movement * speed * Time.fixedDeltaTime);
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
     }
 
+    public CapsuleCollider2D playerCollider;
+    public bool runPastBandits = false;
+    public void run()
+    {
+        playerCollider.isTrigger = true;
+        runPastBandits = true;
+    }
 }

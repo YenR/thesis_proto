@@ -75,6 +75,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
+        
         if (Input.GetKeyDown("space") && !choiceDialogueOpen && playerMovement.canMove == false)// && sentences.Count > 0)
         {
             DisplayNextSentence();
@@ -144,8 +145,8 @@ public class DialogueManager : MonoBehaviour
         c4_text.SetText(dc.sentences[0]);
         c4_button1.SetText(dc.choices[0]);
         c4_button2.SetText(dc.choices[1]);
-        c4_button2.SetText(dc.choices[2]);
-        c4_button2.SetText(dc.choices[3]);
+        c4_button3.SetText(dc.choices[2]);
+        c4_button4.SetText(dc.choices[3]);
         choice_handling[0] = dc.choice_results[0];
         choice_handling[1] = dc.choice_results[1];
         choice_handling[2] = dc.choice_results[2];

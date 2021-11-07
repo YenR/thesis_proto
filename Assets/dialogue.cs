@@ -45,6 +45,14 @@ public class dialogue_result
         {
             bandit_script.instance.moveAway();
         }
+        if(result == 7) // flee from bandits
+        {
+            bandit_script.instance.runaway();
+        }
+        if(result == 8) // convince the bandits
+        {
+            bandit_script.instance.convince();
+        }
 
         if(result == 10) // threaten the doctor to give it for free
         {
@@ -66,6 +74,33 @@ public class dialogue_result
         {
             doc_script.friendly = true;
             doc_script.instance.got_robbed();
+        }
+
+        if(result == 13) // plea for better price
+        {
+            doc_script.friendly = true;
+            if (hudscipt.instance.mone.text == "15")
+                hudscipt.instance.update_money("5");
+            else
+                hudscipt.instance.update_money("0");
+            doc_script.instance.pleaded();
+        }
+
+        if(result == 14) // bought the medicine
+        {
+            doc_script.friendly = true;
+            hudscipt.instance.update_money("0");
+            doc_script.instance.bought();
+        }
+
+        if(result == 20) // keep the money
+        {
+            mom_script.instance.keep_money();
+        }
+        if(result == 21) // give money back to mom
+        {
+            mom_script.instance.confess();
+            hudscipt.instance.update_money("0");
         }
     }
 }

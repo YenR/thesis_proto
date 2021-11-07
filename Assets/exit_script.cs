@@ -32,6 +32,12 @@ public class exit_script : MonoBehaviour, IinteractionTrigger
         text.SetText("");
         ib.callback = null;
 
+        if(globalVars.progress >= 5f)
+        {
+            ll.LoadLevelByName("Done");
+            return;
+        }
+
         if (globalVars.progress < 1)
         {
             dm.StartDialogue(d1);

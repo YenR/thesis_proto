@@ -11,6 +11,7 @@ public class bandit_script : MonoBehaviour
     // 0 = default
     // 1 = fought
     // 2 = threatened
+    // 3 = gone (after running away)
 
     public static bandit_script instance;
 
@@ -25,6 +26,11 @@ public class bandit_script : MonoBehaviour
         if (state == 2)
         {
             bandits.SetBool("made_way", true);
+        }
+
+        if(state == 3)
+        {
+            bandits.SetBool("gone", true);
         }
     }
 
@@ -59,7 +65,10 @@ public class bandit_script : MonoBehaviour
         if(!talked_to)
         {
             dm.StartDialogue(d);
-            dm.nextDialogue = dc;
+            if (globalVars.MCx_level == 1)
+                dm.nextDialogue = dc;
+            else
+                dm.nextDialogue = dc_4;
             talked_to = true;
             globalVars.progress = 3;
         }
@@ -77,5 +86,24 @@ public class bandit_script : MonoBehaviour
     public dialogue_choices dc;     // MCx 1 version
     public dialogue_choices dc_4;   // MCx 2 version
 
+    public dialogue convinced;
+    public dialogue running_away;
 
+    public playerMovement p;
+
+    public void runaway()
+    {
+        //bandits.SetTrigger("make_way");
+        dm.nextDialogue = running_away;
+        p.run();
+        state = 3;  
+    }
+
+    public void convince()
+    {
+        dm.nextDialogue = convinced;
+
+        bandits.SetTrigger("make_way");
+        state = 2;
+    }
 }

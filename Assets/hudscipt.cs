@@ -35,10 +35,11 @@ public class hudscipt : MonoBehaviour
     public TMP_Text mone;
 
     public static string text;
-    public static string money;// = "20";
+    public static string money;// = "15";
 
     public void update_money(string m)
     {
+        Debug.Log("updating money to "+ m);
         money = m;
         mone.SetText(m);
     }

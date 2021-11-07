@@ -11,6 +11,13 @@ public class mom_script : MonoBehaviour, IinteractionTrigger
 
     public interactButton ib;
 
+    public static mom_script instance;
+
+    private void Start()
+    {
+        instance = this;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         button.gameObject.SetActive(true);
@@ -47,9 +54,11 @@ public class mom_script : MonoBehaviour, IinteractionTrigger
         else if(globalVars.progress == 4f)
         {
             dm.StartDialogue(dialog_3);
-            if (hudscipt.instance.mone.text != "0f")
+            if (hudscipt.instance.mone.text != "0" && globalVars.MCx_level == 1)
                 dm.nextDialogue = money_left_over;
-            hudscipt.instance.update_todo("You did it!");
+            else if (hudscipt.instance.mone.text != "0" && globalVars.MCx_level == 2)
+                dm.nextDialogue = tell_about_money;
+            hudscipt.instance.update_todo("You did it! Leave the house to finish the game.");
             globalVars.progress = 5f;
         }
         else
@@ -67,4 +76,17 @@ public class mom_script : MonoBehaviour, IinteractionTrigger
     public dialogue money_left_over;
 
     public dialogue def;
+
+    public dialogue_choices tell_about_money;
+    public dialogue confessed;
+
+    public void confess()
+    {
+        dm.nextDialogue = confessed;
+    }
+
+    public void keep_money()
+    {
+        dm.nextDialogue = money_left_over;
+    }
 }
