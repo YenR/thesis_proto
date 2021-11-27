@@ -5273,7 +5273,7 @@ MonoBehaviour:
   tell_about_money:
     name: ' '
     sentences:
-    - You have money left over...
+    - You notice that you have money left over...
     choices:
     - Keep it
     - Give it back
