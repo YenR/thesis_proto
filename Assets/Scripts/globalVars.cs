@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class globalVars : MonoBehaviour
+public class globalVars //: MonoBehaviour
 {
     public static float progress = 0f;
 
@@ -18,4 +18,6 @@ public class globalVars : MonoBehaviour
     // MCx level 1 = low moral complexity
     // MCx level 2 = high moral complexity
     public static int MCx_level = 1;
+
+    public static collectedData data;
 }
