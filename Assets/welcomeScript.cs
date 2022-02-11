@@ -41,9 +41,11 @@ public class welcomeScript : MonoBehaviour
             globalVars.data.enter_draw = false;
 
         globalVars.data.email = inputfield.text;
-        ns.OnPress();
+        //ns.OnPress();
+        ll.LoadNextLevel();
     }
 
+    public LevelLoader ll;
     public networkScript ns;
 
     // from https://forum.unity.com/threads/check-if-its-an-e-mail.73132/
