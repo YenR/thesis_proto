@@ -13,7 +13,8 @@ public class networkScript : MonoBehaviour
     public TMP_InputField input;
     public TMP_Text output;
 
-    string postURL = "http://hosting169269.ae858.netcup.net/testing/post-json.php";
+    string postURL = "https://mcx-aau.at/post-json.php";
+        // "http://hosting169269.ae858.netcup.net/testing/post-json.php";
         //"http://127.0.0.1/testing/post.php";
 
     public void OnPress()
@@ -22,6 +23,7 @@ public class networkScript : MonoBehaviour
         collectedData sendme = globalVars.data; //new collectedData();
         sendme.mac_ad = "";// GetNetworkInterfaces();
         sendme.endtime = Time.time;
+        sendme.onMobile = Application.isMobilePlatform;
         //sendme.message = input.text;
         StartCoroutine(SendPostRequest(sendme));
     }
@@ -37,20 +39,34 @@ public class networkScript : MonoBehaviour
 
         yield return www.SendWebRequest();
 
-        Debug.Log("form sent");
+        //Debug.Log("form sent: " + JsonUtility.ToJson(post));
 
         if(www.isNetworkError || www.isHttpError)
         {
             Debug.Log("showing errors");
             Debug.LogError(www.error);
+
+            if (callback != null)
+            {
+                callback.callMeBack(false, www.error);
+            }
         }
         else
         {
             Debug.Log("success");
             Debug.Log(www.downloadHandler.text);
+
+
+            if (callback != null)
+            {
+                callback.callMeBack(true, www.downloadHandler.text);
+            }
         }
 
     }
+
+    public sheet5script callback = null;
+
     /*
     public string GetNetworkInterfaces()
     {

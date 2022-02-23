@@ -21,6 +21,16 @@ public class collectedData
 
     public string country;
     public int age;
-    public int gender; // 0 = m, 1 = f, 2 = other
+    public int gender; // 0 = f, 1 = m, 2 = other
     public string comments;
+
+    public int mcx_lvl; // 1 = low, 2 = high
+    public bool onMobile;
+
+    public int[] answers_ingame = new int[4]; 
+    // 0 = take money at home <0,+1>
+    // 1 = deal with bandits <0,1,+2,+3>
+    // 2 = get medicine <0,1,2,+3,+4>
+    // 3 = give money back <0,+1>
+    // + means only available at high mcx
 }

@@ -8,6 +8,9 @@ public class sheet4Script : MonoBehaviour
 
     public void onPressContinue()
     {
+
+       // if (globalVars.data == null)
+       //     globalVars.data = new collectedData();
         globalVars.data.start_game = Time.time;
         ll.LoadNextLevel();
     }

@@ -180,7 +180,7 @@ namespace WebGLSupport
             WebGLInputPlugin.WebGLInputTab(id, OnTab);
             // default value : https://www.w3schools.com/tags/att_input_maxlength.asp
             WebGLInputPlugin.WebGLInputMaxLength(id, (input.characterLimit > 0) ? input.characterLimit : 524288);
-            WebGLInputPlugin.WebGLInputFocus(id);
+            //WebGLInputPlugin.WebGLInputFocus(id);
 #if WEBGLINPUT_TAB
             WebGLInputPlugin.WebGLInputEnableTabText(id, enableTabText);
 #endif

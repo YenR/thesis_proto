@@ -12,6 +12,9 @@ public class welcomeScript : MonoBehaviour
 
     public TMP_Text errortext;
 
+    public TMP_InputField country, age;
+    public Toggle g1, g2, g3;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +24,21 @@ public class welcomeScript : MonoBehaviour
     
     public void onPressContinue()
     {
+        if(country.text == string.Empty)
+        {
+            errortext.SetText("Please enter a valid country.");
+            return;
+        }
+        if(age.text == string.Empty || !int.TryParse(age.text, out int n))
+        {
+            errortext.SetText("Please enter a valid age.");
+            return;
+        }
+        if(!g1.isOn && !g2.isOn && !g3.isOn)
+        {
+            errortext.SetText("Please select what gender you identify as.");
+            return;
+        }
         if(!t1.isOn || !t2.isOn)
         {
             errortext.SetText("Please accept the terms and conditions as well as the notice about data regulations.");
@@ -41,6 +59,18 @@ public class welcomeScript : MonoBehaviour
             globalVars.data.enter_draw = false;
 
         globalVars.data.email = inputfield.text;
+
+        globalVars.data.country = country.text;
+        globalVars.data.age = int.Parse(age.text);
+        if (g1.isOn)
+            globalVars.data.gender = 0;
+        else if (g2.isOn)
+            globalVars.data.gender = 1;
+        else if (g3.isOn)
+            globalVars.data.gender = 2;
+        else
+            globalVars.data.gender = int.MinValue;
+
         //ns.OnPress();
         ll.LoadNextLevel();
     }

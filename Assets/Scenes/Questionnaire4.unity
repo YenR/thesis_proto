@@ -203,7 +203,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1264676853}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.9763889
+  m_Size: 0.97578835
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -276,6 +276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   input: {fileID: 1639485581}
   output: {fileID: 654085717}
+  callback: {fileID: 0}
 --- !u!4 &135247053
 Transform:
   m_ObjectHideFlags: 0
@@ -383,7 +384,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 314940826}
+      - m_Target: {fileID: 135247052}
         m_MethodName: OnPress
         m_Mode: 1
         m_Arguments:
@@ -570,6 +571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   input: {fileID: 0}
   output: {fileID: 0}
+  callback: {fileID: 0}
 --- !u!4 &314940827
 Transform:
   m_ObjectHideFlags: 0
