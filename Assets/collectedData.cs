@@ -12,7 +12,7 @@ public class collectedData
     public float starttime, endtime;
     public bool enter_draw;
     public string email;
-    public string mac_ad;
+    //public string mac_ad;
 
     public int[] answers_mct = new int[27];
 

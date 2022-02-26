@@ -125,10 +125,10 @@ namespace WebGLSupport
 
         private IInputField Setup()
         {
-            if (GetComponent<InputField>()) return new WrappedInputField(GetComponent<InputField>());
-#if TMP_WEBGL_SUPPORT
+            //if (GetComponent<InputField>()) return new WrappedInputField(GetComponent<InputField>());
+//#if TMP_WEBGL_SUPPORT
             if (GetComponent<TMPro.TMP_InputField>()) return new WrappedTMPInputField(GetComponent<TMPro.TMP_InputField>());
-#endif // TMP_WEBGL_SUPPORT
+//#endif // TMP_WEBGL_SUPPORT
             throw new Exception("Can not Setup WebGLInput!!");
         }
 
@@ -152,22 +152,28 @@ namespace WebGLSupport
         /// <param name="eventData"></param>
         public void OnSelect()
         {
+            //var rect = new Rect(0,0,Screen.width, Screen.height);//GetScreenCoordinates(input.RectTransform());
             var rect = GetScreenCoordinates(input.RectTransform());
             bool isPassword = input.contentType == ContentType.Password;
 
-            var fontSize = Mathf.Max(14, input.fontSize); // limit font size : 14 !!
+            var fontSize = Mathf.Max(16, input.fontSize); // limit font size : 14 !!
 
             // モバイルの場合、強制表示する
             if (showHtmlElement || Application.isMobilePlatform)
             {
                 var x = (int)(rect.x);
                 var y = (int)(Screen.height - (rect.y + rect.height));
-                id = WebGLInputPlugin.WebGLInputCreate(WebGLInput.CanvasId, x, y, (int)rect.width, (int)rect.height, fontSize, input.text, input.placeholder, input.lineType != LineType.SingleLine, isPassword, false);
+                //id = WebGLInputPlugin.WebGLInputCreate(WebGLInput.CanvasId, 0, 0, 0, 0, fontSize, input.text, input.placeholder, input.lineType != LineType.SingleLine, isPassword, true);
+
+                id = WebGLInputPlugin.WebGLInputCreate(WebGLInput.CanvasId, x, y, (int)rect.width, (int)rect.height, fontSize, input.text, input.placeholder, input.lineType != LineType.SingleLine, isPassword, true);
             }
             else
             {
                 var x = (int)(rect.x);
                 var y = (int)(Screen.height - (rect.y));
+
+                //id = WebGLInputPlugin.WebGLInputCreate(WebGLInput.CanvasId, 0, 0, 0, 0, fontSize, input.text, input.placeholder, input.lineType != LineType.SingleLine, isPassword, true);
+
                 id = WebGLInputPlugin.WebGLInputCreate(WebGLInput.CanvasId, x, y, (int)rect.width, (int)1, fontSize, input.text, input.placeholder, input.lineType != LineType.SingleLine, isPassword, true);
             }
 
@@ -180,7 +186,7 @@ namespace WebGLSupport
             WebGLInputPlugin.WebGLInputTab(id, OnTab);
             // default value : https://www.w3schools.com/tags/att_input_maxlength.asp
             WebGLInputPlugin.WebGLInputMaxLength(id, (input.characterLimit > 0) ? input.characterLimit : 524288);
-            //WebGLInputPlugin.WebGLInputFocus(id);
+            WebGLInputPlugin.WebGLInputFocus(id);
 #if WEBGLINPUT_TAB
             WebGLInputPlugin.WebGLInputEnableTabText(id, enableTabText);
 #endif
@@ -188,13 +194,14 @@ namespace WebGLSupport
             {
                 WebGLInputPlugin.WebGLInputSetSelectionRange(id, 0, input.text.Length);
             }
-
+            
             WebGLWindow.OnBlurEvent += OnWindowBlur;
         }
 
         void OnWindowBlur()
         {
             blurBlock = true;
+            
         }
 
         /// <summary>
@@ -231,10 +238,11 @@ namespace WebGLSupport
                 max.y = Mathf.Max(max.y, worldCorners[i].y);
             }
 
+            // (worldCorners[0].x, worldCorners[0].y, worldCorners[3].x - worldCorners[0].x, worldCorners[3].y - worldCorners[0].y);//
             return new Rect(min.x, min.y, max.x - min.x, max.y - min.y);
         }
 
-        internal void DeactivateInputField()
+        public void DeactivateInputField()
         {
             if (!instances.ContainsKey(id)) return;
 

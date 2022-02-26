@@ -21,7 +21,7 @@ public class networkScript : MonoBehaviour
     {
         //Debug.Log(GetNetworkInterfaces());
         collectedData sendme = globalVars.data; //new collectedData();
-        sendme.mac_ad = "";// GetNetworkInterfaces();
+        //sendme.mac_ad = "";// GetNetworkInterfaces();
         sendme.endtime = Time.time;
         sendme.onMobile = Application.isMobilePlatform;
         //sendme.message = input.text;

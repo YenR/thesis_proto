@@ -13,12 +13,21 @@ public class sheet5script : MonoBehaviour
     public networkScript net;
     public Button continueButton;
 
+    public TMP_InputField comments;
+
+    private void Start()
+    {
+        if (globalVars.data == null)
+            globalVars.data = new collectedData();
+        globalVars.data.end_game = Time.time;
+    }
+
     public void onClickContinue()
     {
 
         if (globalVars.data == null)
             globalVars.data = new collectedData();
-        globalVars.data.start_game = Time.time;
+        globalVars.data.endtime = Time.time;
 
         foreach (questionScript qs in q)
         {
@@ -32,7 +41,9 @@ public class sheet5script : MonoBehaviour
 
             globalVars.data.answers_guss[qs.qid] = qs.get_answer();
         }
-        
+
+        globalVars.data.comments = comments.text;
+
         //ll.LoadNextLevel();
         continueButton.interactable = false;
         net.callback = this;

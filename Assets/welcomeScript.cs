@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Text.RegularExpressions;
 using TMPro;
+using System;
 
 public class welcomeScript : MonoBehaviour
 {
@@ -21,7 +22,9 @@ public class welcomeScript : MonoBehaviour
         globalVars.data = new collectedData();
         globalVars.data.starttime = Time.time;
     }
-    
+
+    public WebGLSupport.WebGLInput w1, w2, w3;
+
     public void onPressContinue()
     {
         if(country.text == string.Empty)
@@ -70,6 +73,21 @@ public class welcomeScript : MonoBehaviour
             globalVars.data.gender = 2;
         else
             globalVars.data.gender = int.MinValue;
+
+        Debug.Log("trying to destroy webglinput");
+        try
+        {
+            w1.DeactivateInputField();
+            Destroy(w1);
+            w2.DeactivateInputField();
+            Destroy(w2);
+            w3.DeactivateInputField();
+            Destroy(w3);
+        }
+        catch(Exception e)
+        {
+            Debug.Log(e);
+        }
 
         //ns.OnPress();
         ll.LoadNextLevel();
