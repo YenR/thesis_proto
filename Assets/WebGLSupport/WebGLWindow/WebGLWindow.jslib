@@ -66,8 +66,11 @@ var WebGLWindow = {
                     canvas.style.height = beforeHeight + 'px';;
                     beforeParent.insertBefore(canvas, Array.from(beforeParent.children)[index]);
 
+					try{
                     div.parentNode.removeChild(div);
-
+					} catch (error) {
+					  console.error(error);
+					}
                     // remove this function
                     removeEventFullScreen(fullscreenFunc);
                 }

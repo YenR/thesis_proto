@@ -74,20 +74,38 @@ public class welcomeScript : MonoBehaviour
         else
             globalVars.data.gender = int.MinValue;
 
-        Debug.Log("trying to destroy webglinput");
-        try
+        //Debug.Log("trying to destroy webglinput");
+        /*try
         {
-            w1.DeactivateInputField();
+            
             Destroy(w1);
-            w2.DeactivateInputField();
             Destroy(w2);
-            w3.DeactivateInputField();
             Destroy(w3);
+
+            w1.DeactivateInputField();
+            w2.DeactivateInputField();
+            w3.DeactivateInputField();
+            
+            DontDestroyOnLoad(w1);
+            DontDestroyOnLoad(w2);
+            DontDestroyOnLoad(w3);
+
+            inputfield.transform.parent = null;
+            country.transform.parent = null;
+            age.transform.parent = null;
+
+            DontDestroyOnLoad(inputfield);
+            DontDestroyOnLoad(country);
+            DontDestroyOnLoad(age);
+
+            inputfield.gameObject.SetActive(false);
+            country.gameObject.SetActive(false);
+            age.gameObject.SetActive(false); 
         }
         catch(Exception e)
         {
             Debug.Log(e);
-        }
+        }*/
 
         //ns.OnPress();
         ll.LoadNextLevel();

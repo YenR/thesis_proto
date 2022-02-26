@@ -156,7 +156,7 @@ namespace WebGLSupport
             var rect = GetScreenCoordinates(input.RectTransform());
             bool isPassword = input.contentType == ContentType.Password;
 
-            var fontSize = Mathf.Max(16, input.fontSize); // limit font size : 14 !!
+            var fontSize = Mathf.Max(18, input.fontSize); // limit font size : 14 !!
 
             // モバイルの場合、強制表示する
             if (showHtmlElement || Application.isMobilePlatform)

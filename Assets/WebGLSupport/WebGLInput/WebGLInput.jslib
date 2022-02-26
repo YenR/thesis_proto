@@ -150,7 +150,11 @@ var WebGLInput = {
 	},
 	WebGLInputDelete:function(id){
         var input = instances[id];
+		try{
         input.parentNode.removeChild(input);
+		} catch (error) {
+		  console.error(error);
+		}
         instances[id] = null;
     },
 	WebGLInputEnableTabText:function(id, enable) {
