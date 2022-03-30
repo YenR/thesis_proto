@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Questionnaire1.unity
     guid: 8975d1f7c3cb67b42bb3681fd60bc94f
   - enabled: 1
+    path: Assets/Scenes/Questionnaire1-2.unity
+    guid: 17f45b0950351f544ad36fbc9445fd55
+  - enabled: 1
     path: Assets/Scenes/Questionnaire2.unity
     guid: ebc5f4f4bc292074f935570f7ddef834
   - enabled: 1

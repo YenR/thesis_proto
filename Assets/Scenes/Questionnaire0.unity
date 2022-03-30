@@ -317,8 +317,8 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 0.17755428, g: 0.49797317, b: 0.6603774, a: 1}
     m_HighlightedColor: {r: 0.32941177, g: 0.6156863, b: 0.7607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.13300997, g: 0.35251272, b: 0.46226418, a: 1}
+    m_SelectedColor: {r: 0.20478818, g: 0.55882865, b: 0.735849, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1477,7 +1477,7 @@ MonoBehaviour:
   m_text: "Thank you for participating in this experiment. It is funded by the Alpen-Adria
     University of Klagenfurt and serves us to write our master theses. For further
     enquiry please contact us at benjamin.hanussek@aau.at or tom.tucek@aau.at \r\n\nFor
-    your convenience, this experiment has been designed to be taken on either mobile
+    your convenience, this survey has been designed to be taken on either mobile
     or desktop. We recommend taking part in a quiet environment that will allow you
     to focus. Completing the entire experiment is expected to take around 15-20 minutes.
     \n\n\n\n"

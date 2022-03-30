@@ -213,7 +213,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &85485036
 RectTransform:
   m_ObjectHideFlags: 0
@@ -231,7 +231,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -2164}
+  m_AnchoredPosition: {x: 0, y: -592}
   m_SizeDelta: {x: 899.99695, y: 74.326294}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &85485037
@@ -412,7 +412,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1264676853}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.39031535
+  m_Size: 0.36592063
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -602,7 +602,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &142816450
 RectTransform:
   m_ObjectHideFlags: 0
@@ -997,7 +997,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &185893658
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1015,7 +1015,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0.001478, y: -2058.7}
+  m_AnchoredPosition: {x: 0, y: -486.70007}
   m_SizeDelta: {x: 400, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &185893659
@@ -1181,7 +1181,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &251017515
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1265,7 +1265,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &258501603
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2902,7 +2902,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Terms and Conditions
+  m_text: Demographic Survey
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3013,8 +3013,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -831}
-  m_SizeDelta: {x: 1000, y: 1200}
+  m_AnchoredPosition: {x: 0, y: -1060}
+  m_SizeDelta: {x: 1000, y: 567.0665}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &663817761
 MonoBehaviour:
@@ -3035,23 +3035,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "In this experiment, you will have to complete three stages. During the
-    first stage, you will have to fill out a survey. Once you have completed this,
-    you will be led to the second stage where you will play a videogame. Once you
-    finished the game you will be asked to fill out a second survey. \n\nPlease note
-    that closing or reloading the browser window before you have finished with the
-    experiment will cause your progress to be lost.\n\nPlease read the following
-    terms and conditions before beginning with the experiment. \r\n\nWe comply without
-    exceptions to the EU GDPR (General Data Protection Regulation) to ensure the
-    protection of your data rights. If you are interested in more detailed information
-    concerning the GDPR please visit: https://gdpr-info.eu/ \n\r\nThe data that will
-    be gathered during the experiment will be anonymised and stored on a privately
-    hosted server in Austria without any third parties involved. The data gathered
-    will be used exclusively for non-profit research purposes, and to inform winners
-    of the draw. All raw data including your email address will be deleted after
-    the evaluation of the research results. You have the right for your data to be
-    deleted before the completion of the study. In that case please do not hesitate
-    to contact us at benjamin.hanussek@aau.at or tom.tucek@aau.at "
+  m_text: "Participants have the chance to win one of thirty 20\u20AC Steam vouchers.
+    In order to be considered for the raffle, you are required to tick the corresponding
+    box below, provide your email address, and fill out all questions of both surveys.
+    Participants who fail to provide the required data will not be considered for
+    the raffle. \n\nIf you are located in a country that does not use Euro currency,
+    you may not be able to receive a voucher. In this case, you can choose a game
+    from the Steam store up to a value of  20 Euro, that will then be gifted to your
+    Steam account. \n\nYou will receive an email if you won a voucher once the experiment
+    is closed (around July 2022). "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3337,7 +3329,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &734366192
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3354,7 +3346,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -1801.7}
+  m_AnchoredPosition: {x: 0, y: -229.70007}
   m_SizeDelta: {x: 899.99695, y: 74.326294}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &734366193
@@ -3603,7 +3595,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &784579958
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4028,7 +4020,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 454.6, y: 118.00012}
+  m_AnchoredPosition: {x: 454.6, y: 118}
   m_SizeDelta: {x: 801.67334, y: 91.041016}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &981976387
@@ -4559,7 +4551,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1237544579
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4576,7 +4568,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.00085831, y: -2311}
+  m_AnchoredPosition: {x: 0, y: -1550}
   m_SizeDelta: {x: 1006.7477, y: 74.326294}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1237544580
@@ -4783,7 +4775,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 1800}
+  m_SizeDelta: {x: 0, y: 1920}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1315820929
 GameObject:
@@ -4983,7 +4975,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1393331057
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5000,7 +4992,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -1984}
+  m_AnchoredPosition: {x: 0, y: -412.00012}
   m_SizeDelta: {x: 899.99695, y: 74.326294}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1393331058
@@ -5570,7 +5562,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 50, y: -1540}
+  m_AnchoredPosition: {x: 149, y: -1350}
   m_SizeDelta: {x: 1000.64795, y: 259.0921}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1493641554
@@ -6034,7 +6026,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1689763872
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6052,7 +6044,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -2385.7}
+  m_AnchoredPosition: {x: 0.0016892, y: -1630}
   m_SizeDelta: {x: 900, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1689763873
@@ -6372,7 +6364,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1738720104
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6710,7 +6702,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 30, y: -15}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1785154781
@@ -7099,7 +7091,7 @@ MonoBehaviour:
   g1: {fileID: 1762527718}
   g2: {fileID: 132076509}
   g3: {fileID: 2114015457}
-  step: 0
+  step: 1
   w1: {fileID: 1689763876}
   w2: {fileID: 2073509776}
   w3: {fileID: 185893659}
@@ -7122,7 +7114,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1899321216
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7140,7 +7132,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.000038146973, y: -206}
+  m_AnchoredPosition: {x: 0.000038146973, y: -200}
   m_SizeDelta: {x: 1000.64795, y: 45.46707}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1899321218
@@ -7726,7 +7718,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2073509775
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7744,7 +7736,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0.001478, y: -1876.4}
+  m_AnchoredPosition: {x: 0, y: -304.40015}
   m_SizeDelta: {x: 900, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2073509776

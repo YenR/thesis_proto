@@ -16,6 +16,8 @@ public class welcomeScript : MonoBehaviour
     public TMP_InputField country, age;
     public Toggle g1, g2, g3;
 
+    public int step = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,87 +29,64 @@ public class welcomeScript : MonoBehaviour
 
     public void onPressContinue()
     {
-        if(country.text == string.Empty)
+        if(step==0)
         {
-            errortext.SetText("Please enter a valid country.");
-            return;
-        }
-        if(age.text == string.Empty || !int.TryParse(age.text, out int n))
-        {
-            errortext.SetText("Please enter a valid age.");
-            return;
-        }
-        if(!g1.isOn && !g2.isOn && !g3.isOn)
-        {
-            errortext.SetText("Please select what gender you identify as.");
-            return;
-        }
-        if(!t1.isOn || !t2.isOn)
-        {
-            errortext.SetText("Please accept the terms and conditions as well as the notice about data regulations.");
-            return;
-        }
-        else if(t3.isOn)
-        {
-            if(inputfield.text == string.Empty || !TestEmail.IsEmail(inputfield.text))
+            if (!t1.isOn || !t2.isOn)
             {
-                errortext.SetText("Please put in a valid e-mail address if you want to take part in the draw.");
+                errortext.SetText("Please accept the terms and conditions as well as the notice about data regulations.");
                 return;
             }
         }
-
-        if (t3.isOn)
-            globalVars.data.enter_draw = true;
-        else
-            globalVars.data.enter_draw = false;
-
-        globalVars.data.email = inputfield.text;
-
-        globalVars.data.country = country.text;
-        globalVars.data.age = int.Parse(age.text);
-        if (g1.isOn)
-            globalVars.data.gender = 0;
-        else if (g2.isOn)
-            globalVars.data.gender = 1;
-        else if (g3.isOn)
-            globalVars.data.gender = 2;
-        else
-            globalVars.data.gender = int.MinValue;
-
-        //Debug.Log("trying to destroy webglinput");
-        /*try
+        else if(step == 1)
         {
+            if (country.text == string.Empty)
+            {
+                errortext.SetText("Please enter a valid country.");
+                return;
+            }
+            if (age.text == string.Empty || !int.TryParse(age.text, out int n))
+            {
+                errortext.SetText("Please enter a valid age.");
+                return;
+            }
+            if (!g1.isOn && !g2.isOn && !g3.isOn)
+            {
+                errortext.SetText("Please select what gender you identify as.");
+                return;
+            }
+            if (t3.isOn)
+            {
+                if (inputfield.text == string.Empty || !TestEmail.IsEmail(inputfield.text))
+                {
+                    errortext.SetText("Please put in a valid e-mail address if you want to take part in the raffle.");
+                    return;
+                }
+            }
+
+            if (t3.isOn)
+                globalVars.data.enter_draw = true;
+            else
+                globalVars.data.enter_draw = false;
             
-            Destroy(w1);
-            Destroy(w2);
-            Destroy(w3);
+            globalVars.data.email = inputfield.text;
 
-            w1.DeactivateInputField();
-            w2.DeactivateInputField();
-            w3.DeactivateInputField();
-            
-            DontDestroyOnLoad(w1);
-            DontDestroyOnLoad(w2);
-            DontDestroyOnLoad(w3);
-
-            inputfield.transform.parent = null;
-            country.transform.parent = null;
-            age.transform.parent = null;
-
-            DontDestroyOnLoad(inputfield);
-            DontDestroyOnLoad(country);
-            DontDestroyOnLoad(age);
-
-            inputfield.gameObject.SetActive(false);
-            country.gameObject.SetActive(false);
-            age.gameObject.SetActive(false); 
+            globalVars.data.country = country.text;
+            globalVars.data.age = int.Parse(age.text);
+            if (g1.isOn)
+                globalVars.data.gender = 0;
+            else if (g2.isOn)
+                globalVars.data.gender = 1;
+            else if (g3.isOn)
+                globalVars.data.gender = 2;
+            else
+                globalVars.data.gender = int.MinValue;
         }
-        catch(Exception e)
+        else
         {
-            Debug.Log(e);
-        }*/
-
-        //ns.OnPress();
+            return;
+        }
+        
+        
         ll.LoadNextLevel();
     }
 

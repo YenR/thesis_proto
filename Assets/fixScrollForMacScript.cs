@@ -13,7 +13,7 @@ public class fixScrollForMacScript : MonoBehaviour
             ScrollRect sr = this.gameObject.GetComponent<ScrollRect>();
             if(sr)
             {
-                sr.scrollSensitivity = 1;
+                sr.scrollSensitivity = 3;
             }
         }
     }
