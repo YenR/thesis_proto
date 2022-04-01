@@ -139365,7 +139365,7 @@ MonoBehaviour:
     - Fight
     - Bluff
     - Flee
-    - Plea
+    - Explain
     choice_results: 05000000060000000700000008000000
   convinced:
     name: Bandit

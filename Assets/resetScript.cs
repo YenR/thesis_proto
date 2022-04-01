@@ -14,4 +14,9 @@ public class resetScript : MonoBehaviour
         bandit_script.state = 0;
         doc_script.friendly = true;
     }
+
+    public void endMusic()
+    {
+        musicScript.instance.StopMusic();
+    }
 }

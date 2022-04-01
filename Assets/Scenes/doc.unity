@@ -4026,29 +4026,29 @@ MonoBehaviour:
     sentences:
     - Hi there. Medicine costs 15 coins now.
     choices:
-    - '"Give it to me for free."'
-    - Steal the medicine
-    - '"Please, I only have 10."'
-    - Buy the medicine
+    - Threaten
+    - Steal
+    - Beg
+    - Buy
     choice_results: 0a0000000c0000000d0000000e000000
   dc_high_mcx_10m:
     name: Doctor
     sentences:
     - Hi there. Medicine costs 15 coins now.
     choices:
-    - '"Give it to me for free."'
-    - '"I''ll give you 10. No more."'
-    - Steal the medicine
-    - '"Please, I only have 10."'
+    - Threaten
+    - Extort
+    - Steal
+    - Beg
     choice_results: 0a0000000b0000000c0000000d000000
   dc_low_mcx:
     name: Doctor
     sentences:
     - Hi there. Medicine costs 15 coins now.
     choices:
-    - '"Give it to me for free."'
-    - '"I''ll give you 10. No more."'
-    - Steal the medicine
+    - Threaten
+    - Extort
+    - Steal
     choice_results: 0a0000000b0000000c000000
   result_threaten:
     name: Doctor

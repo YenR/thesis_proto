@@ -110,7 +110,8 @@ public class DialogueManager : MonoBehaviour
     public void Start2cDialogue(dialogue_choices dc, bool openInstantly = false)
     {
         c2_speaker.SetText(dc.name);
-        c2_text.SetText(dc.sentences[0]);
+        //c2_text.SetText(dc.sentences[0]);
+        StartCoroutine(TypeSentence(dc.sentences[0], c2_text));
         c2_button1.SetText(dc.choices[0]);
         c2_button2.SetText(dc.choices[1]);
         choice_handling[0] = dc.choice_results[0];
@@ -125,7 +126,8 @@ public class DialogueManager : MonoBehaviour
     public void Start3cDialogue(dialogue_choices dc, bool openInstantly = false)
     {
         c3_speaker.SetText(dc.name);
-        c3_text.SetText(dc.sentences[0]);
+        //c3_text.SetText(dc.sentences[0]);
+        StartCoroutine(TypeSentence(dc.sentences[0], c3_text));
         c3_button1.SetText(dc.choices[0]);
         c3_button2.SetText(dc.choices[1]);
         c3_button3.SetText(dc.choices[2]);
@@ -142,7 +144,8 @@ public class DialogueManager : MonoBehaviour
     public void Start4cDialogue(dialogue_choices dc, bool openInstantly = false)
     {
         c4_speaker.SetText(dc.name);
-        c4_text.SetText(dc.sentences[0]);
+        //c4_text.SetText(dc.sentences[0]);
+        StartCoroutine(TypeSentence(dc.sentences[0], c4_text));
         c4_button1.SetText(dc.choices[0]);
         c4_button2.SetText(dc.choices[1]);
         c4_button3.SetText(dc.choices[2]);
@@ -212,13 +215,21 @@ public class DialogueManager : MonoBehaviour
         //Debug.Log(sentence);
     }
 
-    IEnumerator TypeSentence (string sentence)
+    IEnumerator TypeSentence (string sentence, TMP_Text target = null)
     {
-        dialogueText.text = "";
+        if (target == null)
+            target = dialogueText;
+        target.text = "";
         foreach(char letter in sentence.ToCharArray())
         {
-            dialogueText.text += letter;
+            if (speakSound && lastSpoken + speaksoundCD < Time.time)
+            {
+                speakSound.PlayOneShot(speakSound.clip);
+                lastSpoken = Time.time;
+            }
+            target.text += letter;
             yield return null;
+            yield return new WaitForSeconds(0.01f);
         }
     }
 
@@ -242,6 +253,18 @@ public class DialogueManager : MonoBehaviour
             animator.SetTrigger("closeAnim");
             hudscipt.instance.show();
             playerMovement.canMove = true;
+            if (globalVars.progress == 5f)
+            {
+                LevelLoader ll = FindObjectOfType<LevelLoader>();
+                    //transform.parent.GetComponentInChildren<LevelLoader>();
+                Debug.Log(ll);
+                if (ll)
+                {
+                    Debug.Log(globalVars.progress);
+                    ll.LoadLevelByName("Done");
+                    return;
+                }
+            }
         }
         //Debug.Log("End of conversation");
         //canvas.enabled = false;
@@ -249,6 +272,8 @@ public class DialogueManager : MonoBehaviour
         //GameObject.Find("Player").GetComponent<shooting>().enabled = true;
     }
 
-
+    public AudioSource speakSound;
+    public float speaksoundCD = 0.2f;
+    private float lastSpoken = 0f;
 
 }
