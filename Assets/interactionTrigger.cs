@@ -13,13 +13,13 @@ public class interactionTrigger : MonoBehaviour, IinteractionTrigger
 {
     public Button button;
     public TMP_Text text;
-
+    public string buttonText = "Enter";
     public interactButton ib;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         button.gameObject.SetActive(true);
-        text.SetText("Enter");
+        text.SetText(buttonText);
         ib.callback = this;
     }
 
@@ -30,7 +30,7 @@ public class interactionTrigger : MonoBehaviour, IinteractionTrigger
         ib.callback = null;
     }
 
-    public void callback()
+    public virtual void callback()
     {
         Debug.Log("entered");
         button.gameObject.SetActive(false);

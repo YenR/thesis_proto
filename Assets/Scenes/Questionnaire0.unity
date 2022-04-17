@@ -155,7 +155,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0.0000038146973, y: -238}
+  m_AnchoredPosition: {x: 0, y: -220}
   m_SizeDelta: {x: 1100, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &55668447
@@ -177,12 +177,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "It seems like you are using a mobile device.\nWe recommend using landscape
-    orientation (turning the device sideways) while taking part in this experiment.
-    \nThank you very much for your cooperation!"
+  m_text: "It seems like you are using a mobile device.\nUnfortunately, we have to
+    highly recommend using a desktop or laptop device to participate in this study,
+    as many mobile devices are not yet supported. \n\nIf you want to continue anyway,
+    we recommend using landscape orientation (turning the device sideways). \nThank
+    you very much for your cooperation!"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b92fd17f28f7f1b469f70212c6ac3b76, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: b92fd17f28f7f1b469f70212c6ac3b76, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -206,8 +208,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 52
-  m_fontSizeBase: 52
+  m_fontSize: 42
+  m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -218,7 +220,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 6
   m_wordSpacing: 0
-  m_lineSpacing: 16
+  m_lineSpacing: 10
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -292,7 +294,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -210, y: 90}
+  m_AnchoredPosition: {x: -250, y: 120}
   m_SizeDelta: {x: 323.73108, y: 91.040726}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &154967728
@@ -422,8 +424,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -600, y: 74}
-  m_SizeDelta: {x: 300, y: 100}
+  m_AnchoredPosition: {x: -600, y: 30}
+  m_SizeDelta: {x: 500, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &380054033
 MonoBehaviour:
@@ -1319,7 +1321,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -111}
+  m_AnchoredPosition: {x: 0, y: -100}
   m_SizeDelta: {x: 900, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &661582698
@@ -1476,11 +1478,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Thank you for participating in this experiment. It is funded by the Alpen-Adria
     University of Klagenfurt and serves us to write our master theses. For further
-    enquiry please contact us at benjamin.hanussek@aau.at or tom.tucek@aau.at \r\n\nFor
-    your convenience, this survey has been designed to be taken on either mobile
-    or desktop. We recommend taking part in a quiet environment that will allow you
-    to focus. Completing the entire experiment is expected to take around 15-20 minutes.
-    \n\n\n\n"
+    enquiry please contact us at benjamin.hanussek@aau.at or tom.tucek@aau.at \r\n\nWe
+    recommend taking part in a quiet environment that will allow you to focus. Completing
+    the entire experiment is expected to take around 15-20 minutes. \n\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b92fd17f28f7f1b469f70212c6ac3b76, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: b92fd17f28f7f1b469f70212c6ac3b76, type: 2}
@@ -1926,8 +1926,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -65.8}
-  m_SizeDelta: {x: -80, y: -211.6777}
+  m_AnchoredPosition: {x: 0, y: -54.980568}
+  m_SizeDelta: {x: -80, y: -190.03886}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &931050361
 MonoBehaviour:
@@ -2553,17 +2553,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: OK
+  m_text: Accept and Continue
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b92fd17f28f7f1b469f70212c6ac3b76, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: b92fd17f28f7f1b469f70212c6ac3b76, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2580,13 +2580,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535

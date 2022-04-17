@@ -7,13 +7,14 @@ public class playerMovement : MonoBehaviour
     public float speed = 5f;
 
     public Rigidbody2D rb;
-    Vector2 movement;
+    public Vector2 movement;
 
     public Joystick joystick;
 
     public Animator animator;
 
     public static bool canMove = true;
+    public bool startLookingUp = false;
 
     void Start()
     {
@@ -67,6 +68,11 @@ public class playerMovement : MonoBehaviour
         {
             animator.SetFloat("horizontal", movement.x);
             animator.SetFloat("vertical", movement.y);
+        }
+        if(startLookingUp)
+        {
+            animator.SetFloat("vertical", 0.1f);
+            startLookingUp = false;
         }
         animator.SetFloat("speed", movement.sqrMagnitude);
     }

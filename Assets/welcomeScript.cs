@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using System.Text.RegularExpressions;
 using TMPro;
 using System;
+using System.Globalization;
 
 public class welcomeScript : MonoBehaviour
 {
@@ -39,12 +40,12 @@ public class welcomeScript : MonoBehaviour
         }
         else if(step == 1)
         {
-            if (country.text == string.Empty)
+            if (country.text == string.Empty || !IsCountry(country.text))
             {
                 errortext.SetText("Please enter a valid country.");
                 return;
             }
-            if (age.text == string.Empty || !int.TryParse(age.text, out int n))
+            if (age.text == string.Empty || !int.TryParse(age.text, out int n) || n <= 0)
             {
                 errortext.SetText("Please enter a valid age.");
                 return;
@@ -117,5 +118,30 @@ public class welcomeScript : MonoBehaviour
             if (email != null) return Regex.IsMatch(email, MatchEmailPattern);
             else return false;
         }
+    }
+    
+    // cheap implementation of testing for a valid country
+    List<string> countryList = new List<string>();
+    public bool IsCountry(string country)
+    {
+        if (countryList.Count <= 0)
+        {
+            foreach (var cultureInfo in CultureInfo.GetCultures(CultureTypes.SpecificCultures))
+            {
+                var regionInfo = new RegionInfo(cultureInfo.Name);
+                countryList.Add(regionInfo.EnglishName.ToLower());
+            }
+            countryList.Add("bosnia");
+            countryList.Add("herzegovina");
+            countryList.Add("bosnia and herzegovina");
+            countryList.Add("trinidad");
+            countryList.Add("trinidad and tobago");
+            //countryList.ForEach(c => Debug.Log(c));
+            //Debug.Log(countryList);
+        }
+
+        if (countryList.Contains(country.ToLower()))
+            return true;
+        return false;
     }
 }

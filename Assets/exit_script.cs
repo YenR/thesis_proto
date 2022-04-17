@@ -12,6 +12,14 @@ public class exit_script : MonoBehaviour, IinteractionTrigger
 
     public interactButton ib;
 
+    /*public Animator playerAnimator;
+    private bool setUpped = false;
+
+    private void Update()
+    {
+        
+    }*/
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         button.gameObject.SetActive(true);
@@ -55,12 +63,13 @@ public class exit_script : MonoBehaviour, IinteractionTrigger
 
         if(SceneManager.GetActiveScene().name == "home")
         {
-            LevelLoader.startpos = new Vector2(4, 0);
+            LevelLoader.startpos = new Vector2(4, -0.5f);
         }
         if (SceneManager.GetActiveScene().name == "doc")
         {
             LevelLoader.startpos = new Vector2(91, 20);
         }
+        Debug.Log("exited");
     }
     
     public LevelLoader ll;

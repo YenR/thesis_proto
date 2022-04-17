@@ -5663,6 +5663,11 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 1649953150}
+    - target: {fileID: 8419343764947354557, guid: a1b466f5bac2cb942ba8dc1afdf71fc6,
+        type: 3}
+      propertyPath: startLookingUp
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8419343764947354558, guid: a1b466f5bac2cb942ba8dc1afdf71fc6,
         type: 3}
       propertyPath: m_RootOrder
