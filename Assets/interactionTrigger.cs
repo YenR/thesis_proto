@@ -18,6 +18,10 @@ public class interactionTrigger : MonoBehaviour, IinteractionTrigger
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
+        if (collision.gameObject.tag != "Player")
+            return;
+
         button.gameObject.SetActive(true);
         text.SetText(buttonText);
         ib.callback = this;
@@ -25,6 +29,10 @@ public class interactionTrigger : MonoBehaviour, IinteractionTrigger
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+
+        if (collision.gameObject.tag != "Player")
+            return;
+
         button.gameObject.SetActive(false);
         text.SetText("");
         ib.callback = null;

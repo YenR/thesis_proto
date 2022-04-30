@@ -21,6 +21,9 @@ public class interactThink : interactionTrigger
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        if (collision.gameObject.tag != "Player")
+            return;
+        
         button.gameObject.SetActive(false);
         text.SetText("");
         ib.callback = null;

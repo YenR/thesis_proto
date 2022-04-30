@@ -22,7 +22,7 @@ public class dialogue_result
 {
     public static void handle_result(int result)
     {
-        Debug.Log("got result: " + result);
+        //Debug.Log("got result: " + result);
 
         if(result == 1 ) // took 10 coins
         {

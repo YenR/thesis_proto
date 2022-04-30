@@ -62,7 +62,10 @@ public class bandit_script : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(!talked_to)
+        if (collision.gameObject.tag != "Player")
+            return;
+
+        if (!talked_to)
         {
             dm.StartDialogue(d);
             if (globalVars.MCx_level == 1)
@@ -77,7 +80,7 @@ public class bandit_script : MonoBehaviour
 
     public void callback()
     {
-        Debug.Log("talked to bandits");
+        //Debug.Log("talked to bandits");
         dm.StartDialogue(dc);
     }
 

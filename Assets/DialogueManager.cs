@@ -35,7 +35,7 @@ public class DialogueManager : MonoBehaviour
     {
         hudscipt.instance.hide(); //.gameObject.SetActive(false);
         playerMovement.canMove = false;
-        Debug.Log("henlO");
+        //Debug.Log("henlO");
 
         if (d is dialogue_choices)
         {
@@ -90,7 +90,7 @@ public class DialogueManager : MonoBehaviour
         choiceDialogueOpen = true;
 
         dialogue_choices dc = (dialogue_choices)d;
-        Debug.Log("choice dialogue started");
+        //Debug.Log("choice dialogue started");
         
         if(dc.choices.Length == 2)
         {
@@ -166,7 +166,7 @@ public class DialogueManager : MonoBehaviour
 
     public void choice_clicked(int i)
     {
-        Debug.Log("choice clicked: " + i);
+        //Debug.Log("choice clicked: " + i);
         dialogue_result.handle_result(choice_handling[i]);
 
         if(nextDialogue != null && nextDialogue.sentences != null && nextDialogue.sentences.Length > 0)
@@ -239,7 +239,7 @@ public class DialogueManager : MonoBehaviour
     {
         if(nextDialogue != null && nextDialogue.sentences != null && nextDialogue.sentences.Length > 0)
         {
-            Debug.Log("next dialogue not null");
+            //Debug.Log("next dialogue not null");
             animator.SetTrigger("closeNow");
             //animator.SetBool("isOpen", false);
             //animator.SetTrigger("closeAnim");
@@ -248,7 +248,7 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("next dialogue is null");
+            //Debug.Log("next dialogue is null");
             //animator.SetBool("isOpen", false);
             animator.SetTrigger("closeAnim");
             hudscipt.instance.show();
@@ -257,10 +257,10 @@ public class DialogueManager : MonoBehaviour
             {
                 LevelLoader ll = FindObjectOfType<LevelLoader>();
                     //transform.parent.GetComponentInChildren<LevelLoader>();
-                Debug.Log(ll);
+                //Debug.Log(ll);
                 if (ll)
                 {
-                    Debug.Log(globalVars.progress);
+                    //Debug.Log(globalVars.progress);
                     ll.LoadLevelByName("Done");
                     return;
                 }
