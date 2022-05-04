@@ -45,9 +45,13 @@ public class interactionTrigger : MonoBehaviour, IinteractionTrigger
         text.SetText("");
         ib.callback = null;
 
+        if (door != null)
+            door.PlayOneShot(door.clip);
         //dm.StartDialogue(dc);
         ll.LoadLevelByName("home");
     }
+
+    public AudioSource door;
 
     public DialogueManager dm;
     public dialogue_choices dc;

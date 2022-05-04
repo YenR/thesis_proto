@@ -9,12 +9,16 @@ public class interactThink : interactionTrigger
     public GameObject playerThoughts;
     public TMP_Text thought_txt;
 
+    public AudioSource fail;
+
     override public void callback()
     {
         button.gameObject.SetActive(false);
         text.SetText("");
         ib.callback = null;
 
+        if(fail!=null)
+            fail.PlayOneShot(fail.clip);
         thought_txt.SetText(thought);
         playerThoughts.SetActive(true);
     }

@@ -34,6 +34,8 @@ public class exit_script : MonoBehaviour, IinteractionTrigger
         ib.callback = null;
     }
 
+    public AudioSource door;
+
     public void callback()
     {
         button.gameObject.SetActive(false);
@@ -46,18 +48,21 @@ public class exit_script : MonoBehaviour, IinteractionTrigger
             return;
         }
 
-        if (globalVars.progress < 1)
+        if (globalVars.progress < 1 && dm != null)
         {
             dm.StartDialogue(d1);
             return;
         }
-        else if(globalVars.progress < 2)
+        else if(globalVars.progress < 2 && dm != null)
         {
             dm.StartDialogue(d2);
             return;
         }
 
-        Debug.Log("exited");
+        if(door != null)
+            door.PlayOneShot(door.clip);
+
+        //Debug.Log("exited");
         //dm.StartDialogue(dc);
         ll.LoadLevelByName("GameScene1");
 
