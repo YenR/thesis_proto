@@ -88,9 +88,9 @@ public class chestScript : MonoBehaviour, IinteractionTrigger
             yield break;
         }
 
-        yield return new WaitForSeconds(0.3f);
         coinBling.PlayOneShot(coinBling.clip);
         coin.SetTrigger("show");
+        yield return new WaitForSeconds(0.3f);
         times--;
         StartCoroutine(playCoinAnimation(times));
     }

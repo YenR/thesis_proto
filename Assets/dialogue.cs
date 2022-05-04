@@ -86,7 +86,7 @@ public class dialogue_result
                 hudscipt.instance.update_money("5");
             else
                 hudscipt.instance.update_money("0");
-            doc_script.instance.got_threatened();
+            doc_script.instance.got_forced();
             if (globalVars.data != null)
                 globalVars.data.answers_ingame[2] = 1;
         }

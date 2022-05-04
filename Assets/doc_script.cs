@@ -63,29 +63,96 @@ public class doc_script : MonoBehaviour, IinteractionTrigger
 
     public void got_threatened()
     {
-        //dm.StartDialogue(result_threaten, true);
         dm.nextDialogue = result_threaten;
+
+        StartCoroutine(getPotion());
+    }
+
+
+    public void got_forced()
+    {
+        dm.nextDialogue = result_threaten;
+
+        StartCoroutine(giveCoins(1));
+        StartCoroutine(getPotion());
     }
 
     public void got_robbed()
     {
-        //dm.StartDialogue(result_steal, true);
         dm.nextDialogue = result_steal;
+        StartCoroutine(stealPotion());
     }
 
     public void pleaded()
     {
         dm.nextDialogue = result_plea;
+        StartCoroutine(giveCoins(10));
+        StartCoroutine(getPotion());
     }
 
     public void bought()
     {
         dm.nextDialogue = result_buy;
+        StartCoroutine(giveCoins(15));
+        StartCoroutine(getPotion());
     }
 
+    public IEnumerator stealPotion()
+    {
+        while(!playerMovement.canMove) // wait for dialogue to close
+        {
+            yield return new WaitForSeconds(0.2f);
+        }
+        docAnim.SetBool("look_away", true);
+        potionAnim.SetTrigger("move");
+        swipeAudio.PlayOneShot(swipeAudio.clip);
+        yield return new WaitForSeconds(1.2f);
+        docAnim.SetBool("look_away", false);
+        //yield return 0;
+    }
+
+    public IEnumerator getPotion()
+    {
+        while (!playerMovement.canMove) // wait for dialogue to close
+        {
+            yield return new WaitForSeconds(0.2f);
+        }
+
+        potionAnim.SetTrigger("move");
+        yield return new WaitForSeconds(0.2f);
+        getAudio.PlayOneShot(getAudio.clip);
+        //yield return 0;
+    }
+
+    public IEnumerator giveCoins(int amount)
+    {
+        if (amount <= 0)
+        {
+            //StartCoroutine(getPotion());
+            //yield return new WaitForSeconds(0.2f);
+            yield break;
+        }
+
+        while (!playerMovement.canMove) // wait for dialogue to close
+        {
+            yield return new WaitForSeconds(0.2f);
+        }
+
+        coinAnim.SetTrigger("show");
+        coinAudio.PlayOneShot(coinAudio.clip);
+        yield return new WaitForSeconds(0.15f);
+
+        amount--;
+        StartCoroutine(giveCoins(amount));
+        yield return 0;
+    }
+    
     public DialogueManager dm;
 
     public dialogue_choices dc_high_mcx_15m, dc_high_mcx_10m, dc_low_mcx;
     public dialogue result_threaten, result_steal, result_buy, result_plea;
     public dialogue d_bye_friendly, d_bye_hostile;
+
+    public Animator docAnim, potionAnim, coinAnim;
+    public AudioSource coinAudio, swipeAudio, getAudio;
 }

@@ -50,12 +50,20 @@ public class bandit_script : MonoBehaviour
     }
 
     public Animator bandits, player;
+    public AudioSource chop;
 
     public void fight()
     {
         //player.SetTrigger("fight");
         bandits.SetTrigger("fight");
         state = 1;
+        StartCoroutine(playChop());
+    }
+
+    IEnumerator playChop()
+    {
+        yield return new WaitForSeconds(0.2f);
+        chop.PlayOneShot(chop.clip);
     }
 
     //public Animator bboss, b1, b2;
