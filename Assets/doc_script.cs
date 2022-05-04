@@ -86,14 +86,14 @@ public class doc_script : MonoBehaviour, IinteractionTrigger
     public void pleaded()
     {
         dm.nextDialogue = result_plea;
-        StartCoroutine(giveCoins(10));
+        StartCoroutine(giveCoins(1));
         StartCoroutine(getPotion());
     }
 
     public void bought()
     {
         dm.nextDialogue = result_buy;
-        StartCoroutine(giveCoins(15));
+        StartCoroutine(giveCoins(1));
         StartCoroutine(getPotion());
     }
 
@@ -140,7 +140,7 @@ public class doc_script : MonoBehaviour, IinteractionTrigger
 
         coinAnim.SetTrigger("show");
         coinAudio.PlayOneShot(coinAudio.clip);
-        yield return new WaitForSeconds(0.15f);
+        yield return new WaitForSeconds(0.33f);
 
         amount--;
         StartCoroutine(giveCoins(amount));

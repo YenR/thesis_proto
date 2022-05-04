@@ -90,7 +90,7 @@ public class chestScript : MonoBehaviour, IinteractionTrigger
 
         coinBling.PlayOneShot(coinBling.clip);
         coin.SetTrigger("show");
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.33f);
         times--;
         StartCoroutine(playCoinAnimation(times));
     }
