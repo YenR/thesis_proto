@@ -29,6 +29,9 @@ public class dialogue_result
             hudscipt.instance.update_money("10");
             if (globalVars.data != null)
                 globalVars.data.answers_ingame[0] = 0;
+
+
+            chestScript.instance.playCoins(10, true);
         }
         if(result == 2) // took 15 coins
         {
@@ -36,6 +39,8 @@ public class dialogue_result
             //hudscipt.instance.update_todo("Talk to the doctor.\nHe lives on the other side of the forest.");
             if (globalVars.data != null)
                 globalVars.data.answers_ingame[0] = 1;
+
+            chestScript.instance.playCoins(15, true);
         }
         if(result == 3)
         {
