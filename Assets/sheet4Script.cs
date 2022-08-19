@@ -6,6 +6,15 @@ public class sheet4Script : MonoBehaviour
 {
     public LevelLoader ll;
 
+    public networkScript network;
+
+    private void Start()
+    {
+
+        if (network != null)
+            network.OnPress();
+    }
+
     public void onPressContinue()
     {
 
@@ -13,5 +22,6 @@ public class sheet4Script : MonoBehaviour
        //     globalVars.data = new collectedData();
         globalVars.data.start_game = Time.time;
         ll.LoadNextLevel();
+
     }
 }

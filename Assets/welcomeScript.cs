@@ -40,7 +40,7 @@ public class welcomeScript : MonoBehaviour
         }
         else if(step == 1)
         {
-            if (country.text == string.Empty || !IsCountry(country.text))
+            /*if (country.text == string.Empty || !IsCountry(country.text))
             {
                 errortext.SetText("Please enter a valid country.");
                 return;
@@ -68,19 +68,26 @@ public class welcomeScript : MonoBehaviour
                 globalVars.data.enter_draw = true;
             else
                 globalVars.data.enter_draw = false;
-            
+            */
+
+            if (inputfield.text == string.Empty)
+            {
+                errortext.SetText("Please put in your e-mail address or ID.");
+                return;
+            }
+
             globalVars.data.email = inputfield.text;
 
-            globalVars.data.country = country.text;
-            globalVars.data.age = int.Parse(age.text);
-            if (g1.isOn)
+            //globalVars.data.country = country.text;
+            //globalVars.data.age = int.Parse(age.text);
+            /*if (g1.isOn)
                 globalVars.data.gender = 0;
             else if (g2.isOn)
                 globalVars.data.gender = 1;
             else if (g3.isOn)
                 globalVars.data.gender = 2;
             else
-                globalVars.data.gender = int.MinValue;
+                globalVars.data.gender = int.MinValue;*/
         }
         else
         {

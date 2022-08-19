@@ -17,7 +17,7 @@ public class globalVars //: MonoBehaviour
 
     // MCx level 1 = low moral complexity
     // MCx level 2 = high moral complexity
-    public static int MCx_level = 1;
+    public static int MCx_level = 2;
 
     public static collectedData data;
 }

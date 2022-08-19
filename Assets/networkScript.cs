@@ -20,6 +20,10 @@ public class networkScript : MonoBehaviour
     public void OnPress()
     {
         //Debug.Log(GetNetworkInterfaces());
+
+        if (globalVars.data == null)
+            globalVars.data = new collectedData();
+
         collectedData sendme = globalVars.data; //new collectedData();
         //sendme.mac_ad = "";// GetNetworkInterfaces();
         sendme.endtime = Time.time;
@@ -50,6 +54,10 @@ public class networkScript : MonoBehaviour
             {
                 callback.callMeBack(false, www.error);
             }
+
+            yield return new WaitForSeconds(1f);
+
+            StartCoroutine(SendPostRequest(globalVars.data));
         }
         else
         {

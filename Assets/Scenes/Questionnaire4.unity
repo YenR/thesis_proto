@@ -203,7 +203,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1264676853}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.976708
+  m_Size: 0.9764822
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -309,7 +309,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &154967727
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1231,7 +1231,6 @@ RectTransform:
   - {fileID: 2135458379}
   - {fileID: 450486264}
   - {fileID: 1639485580}
-  - {fileID: 654085719}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1494,16 +1493,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 654085716}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 639213316}
+  m_Father: {fileID: 2059160476}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015259, y: -166}
+  m_AnchoredPosition: {x: -631.5, y: -360.0672}
   m_SizeDelta: {x: 399.5182, y: 194.0001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &661582696
@@ -1562,7 +1561,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Play a Game Prototype
+  m_text: Finish
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b92fd17f28f7f1b469f70212c6ac3b76, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: b92fd17f28f7f1b469f70212c6ac3b76, type: 2}
@@ -1695,12 +1694,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'You will now play a game, which should take you around 5 minutes.
-
-
-    Afterwards,
-    you will have to answer a few more questions about your experience with the game,
-    then you are done!'
+  m_text: You have finished the moral competence test, thank you very much for participating!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b92fd17f28f7f1b469f70212c6ac3b76, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: b92fd17f28f7f1b469f70212c6ac3b76, type: 2}
@@ -2625,7 +2619,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 515953779}
   m_HandleRect: {fileID: 515953778}
   m_Direction: 0
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -2800,6 +2794,7 @@ RectTransform:
   - {fileID: 661582697}
   - {fileID: 663817760}
   - {fileID: 154967727}
+  - {fileID: 654085719}
   m_Father: {fileID: 1270020696}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2858,6 +2853,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ll: {fileID: 1271801306}
+  network: {fileID: 135247052}
 --- !u!1 &2109792672
 GameObject:
   m_ObjectHideFlags: 0

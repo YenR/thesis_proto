@@ -1454,8 +1454,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.0000038147, y: -391.5}
-  m_SizeDelta: {x: 1000, y: 385.09656}
+  m_AnchoredPosition: {x: 0, y: -385.6}
+  m_SizeDelta: {x: 1100, y: 413.7494}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &663817761
 MonoBehaviour:
@@ -1476,11 +1476,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Thank you for participating in this experiment. It is funded by the Alpen-Adria
-    University of Klagenfurt and serves us to write our master theses. For further
-    enquiry please contact us at benjamin.hanussek@aau.at or tom.tucek@aau.at \r\n\nWe
-    recommend taking part in a quiet environment that will allow you to focus. Completing
-    the entire experiment is expected to take around 15-20 minutes. \n\n\n\n"
+  m_text: "Thank you for visiting our website. \nThe original experiment that has
+    run here has concluded.\nWinners of the raffle will be contacted by the end of
+    August 2022.\n\nIf you wish to take the moral competence test, feel free to continue.
+    The game is currently not available, but it and the complete experiment will
+    be uploaded soon to yenrye.itch.io\n\nFor further enquiry please contact us at
+    benjamin.hanussek@aau.at or tom.tucek@aau.at \r\n\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b92fd17f28f7f1b469f70212c6ac3b76, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: b92fd17f28f7f1b469f70212c6ac3b76, type: 2}
