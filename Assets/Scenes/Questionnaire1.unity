@@ -412,7 +412,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1264676853}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.39059287
+  m_Size: 0.39068317
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3036,20 +3036,22 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "In this experiment, you will have to complete three stages. During the
-    first stage, you will have to fill out a survey. \n\nPlease note that closing
-    or reloading the browser window before you have finished with the experiment
-    will cause your progress to be lost.\n\nPlease read the following terms and conditions
-    before beginning with the experiment. \r\n\nWe comply without exceptions to the
-    EU GDPR (General Data Protection Regulation) to ensure the protection of your
-    data rights. If you are interested in more detailed information concerning the
-    GDPR please visit: https://gdpr-info.eu/ \n\r\nThe data that will be gathered
-    during the experiment will be anonymised and stored on a privately hosted server
-    in Austria without any third parties involved. The data gathered will be used
-    exclusively for non-profit research purposes. All raw data including your email
-    address will be deleted after the evaluation of the research results. You have
-    the right for your data to be deleted before the completion of the study. In
-    that case please do not hesitate to contact us at benjamin.hanussek@aau.at or
-    tom.tucek@aau.at "
+    first stage, you will have to fill out a survey. Once you have completed this,
+    you will be led to the second stage where you will play a videogame. Once you
+    finished the game you will be asked to fill out a second survey. \n\nPlease note
+    that closing or reloading the browser window before you have finished with the
+    experiment will cause your progress to be lost.\n\nPlease read the following
+    terms and conditions before beginning with the experiment. \r\n\nWe comply without
+    exceptions to the EU GDPR (General Data Protection Regulation) to ensure the
+    protection of your data rights. If you are interested in more detailed information
+    concerning the GDPR please visit: https://gdpr-info.eu/ \n\r\nThe data that will
+    be gathered during the experiment will be anonymised and stored on a privately
+    hosted server in Austria without any third parties involved. The data gathered
+    will be used exclusively for non-profit research purposes, and to inform winners
+    of the draw. All raw data including your email address will be deleted after
+    the evaluation of the research results. You have the right for your data to be
+    deleted before the completion of the study. In that case please do not hesitate
+    to contact us at benjamin.hanussek@aau.at or tom.tucek@aau.at "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b92fd17f28f7f1b469f70212c6ac3b76, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: b92fd17f28f7f1b469f70212c6ac3b76, type: 2}
@@ -6805,7 +6807,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 515953779}
   m_HandleRect: {fileID: 515953778}
   m_Direction: 0
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:

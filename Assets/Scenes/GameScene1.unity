@@ -148347,11 +148347,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1642315086027982062, guid: a3b3a4687eebdfe4b9d68cffdc9a71f8,
-        type: 3}
-      propertyPath: m_Layer
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 2158916088824242048, guid: a3b3a4687eebdfe4b9d68cffdc9a71f8,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -148421,11 +148416,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DialogueManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 2158916090030262513, guid: a3b3a4687eebdfe4b9d68cffdc9a71f8,
-        type: 3}
-      propertyPath: m_Layer
-      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2158916090030262513, guid: a3b3a4687eebdfe4b9d68cffdc9a71f8,
         type: 3}
